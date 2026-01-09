@@ -1,0 +1,175 @@
+@import 'colors/one-dark.css';
+
+*{
+    border:none;
+    border-radius: 0px;
+
+    font-family: "Adwaita Sans","JetBrainsMono Nerd Font Propo",sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+#custom-archicon {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 18px; /* Adjust size as needed */
+    /* color: #eeeeee; */
+    color: #1793D1; /*Optional: Arch blue color*/
+}
+
+
+window#waybar{
+    background:transparent;
+}
+
+tooltip{
+    /* background: #0e91c4;
+    background: linear-gradient(129deg, rgba(14, 145, 196, 0.4) 1%, rgba(177, 87, 199, 0.4) 50%, rgba(222, 91, 115, 0.4) 98%); */
+    background: rgba(84, 77, 116, 0.8);
+    border: 1px solid white;
+    border-radius:12px;
+}
+
+tooltop label{
+    color: @fg;
+    padding:8px;
+}
+
+
+#workspaces{
+    background: linear-gradient(129deg, rgba(14, 145, 196, 0.4) 1%, rgba(177, 87, 199, 0.4) 50%, rgba(222, 91, 115, 0.4) 98%);
+    /* background-color: rgba(50, 50, 50, 0.6); */
+    /* opacity: 0.8; */
+    padding:5px 3px;
+    margin:0 2px;
+    border-radius:12px;
+    border:2px solid white;
+    color:@fg;
+}
+
+#workspaces button{
+    padding: 0px 0px;
+    margin: 0px 2px;
+    border-radius: 8px;
+    color: transparent;
+    background-color: gainsboro;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active{
+    background-color: greenyellow;
+    color: @bg0;
+    min-width:40px;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+#workspaces button:hover{
+    background-color: aqua;
+    color:@bg0;
+    border-radius:16px;
+    min-width:50px;
+    background-size:400% 400%;
+}
+
+#workspaces button.urgent{
+    background-color: @red;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 35px;
+    background-size: 400% 400%;
+    transition: all 0.2s ease-in-out;
+}
+
+#battery,
+#memory,
+#pulseaudio,
+#network,
+#clock,
+#cpu,
+#mpris,
+#window,
+#custom-logout,
+#custom-nvidia,
+#custom-media,
+#custom-pacman,
+#custom-archicon,
+#custom-notification{
+    background: linear-gradient(-90deg, rgba(14, 98, 132, 0.5) 1%, rgba(120, 57, 136, 0.5) 50%, rgba(137, 53, 68, 0.5) 98%);
+    /* background-color: rgba(50, 50, 50, 0.6); */
+    padding:0 6px 0 6px;
+    margin: 0 2px 0 2px;
+    border-radius: 12px;
+    border: 2px solid white;
+    color: white;
+}
+
+
+#memory:hover,
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#mpris:hover,
+#custom-notification:hover,
+#custom-logout:hover,
+#custom-nvidia:hover,
+#custom-media:hover,
+#custom-pacman:hover,
+#custom-archicon:hover{
+    background: linear-gradient(-90deg, rgba(14, 98, 132, 0.5) 1%, rgba(120, 57, 136, 0.5) 50%, rgba(137, 53, 68, 0.5) 98%);
+    /* background-color: rgba(50, 50, 50, 0.6); */
+    padding:0 6px 0 6px;
+    margin: 0 2px 0 2px;
+    border-radius: 12px;
+    border: 2px solid lightskyblue;
+    color: white;
+}
+
+/* #workspaces:hover{
+    background: linear-gradient(-90deg, rgba(14, 98, 132, 0.5) 1%, rgba(120, 57, 136, 0.5) 50%, rgba(137, 53, 68, 0.5) 98%);
+    border: 2px solid lightskyblue;
+    color: white;
+} */
+
+#custom-archicon,#custom-archicon:hover{
+    margin: 0 0 0 14px;
+}
+
+#custom-notification,#custom-notification:hover{
+    margin: 0 12px 0 2px;
+}
+
+#pulseaudio,#cpu{
+    color: white;
+    min-width: 50px;
+}
+
+#network{
+    color: white;
+}
+
+#window {
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+window#waybar.kitty {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+window#waybar.chromium {
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
+}
