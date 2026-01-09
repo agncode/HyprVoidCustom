@@ -1,3 +1,3 @@
 # HyprVoidCustom
 
-simpan semmua kedalam .config yang ada didalam dir $HOME atau file user/home
+simpan semua kedalam .config yang ada didalam dir $HOME atau file user/home
